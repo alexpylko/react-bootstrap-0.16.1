@@ -4222,6 +4222,9 @@ var OverlayTrigger = React.createClass({displayName: "OverlayTrigger",
       isOverlayShown: true
     }, function() {
       this.updateOverlayPosition();
+      if(this.props.onEnter) {
+        this.props.onEnter();
+      }
     });
   },
 
